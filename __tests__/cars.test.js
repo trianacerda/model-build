@@ -1,7 +1,7 @@
 /* eslint-disable space-before-function-paren */
 const fs = require('fs');
-const pool = require('../utils/pool');
-const Cars = require('./Cars');
+const pool = require('../lib/utils/pool');
+const Cars = require('../lib/models/Cars');
 
 const silverFox = {
   make: 'Toyota',
@@ -24,7 +24,7 @@ const Larry = {
 describe('Cars model- build week 4', () => {
   beforeEach(() => {
     return pool.query(
-      fs.readFileSync(__dirname + '/../../sql/setup.sql', 'utf-8')
+      fs.readFileSync(__dirname + '/../sql/setup.sql', 'utf-8')
     );
   });
 
